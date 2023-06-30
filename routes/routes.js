@@ -61,7 +61,7 @@ import { login, Register, loginRequired } from '../controllers/auth.js'
 const Routes = (app) => {
   app.route('/users')
     .get(loginRequired, getUsers)
-    .post(loginRequired, createUser);
+    .post( createUser);
 
   app.route('/users/:id')
     .get(loginRequired, getUserById)
