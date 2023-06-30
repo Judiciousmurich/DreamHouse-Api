@@ -12,13 +12,13 @@ app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-//Enable COES middleware
-app.use(function(req, res, next){
-    res.setHeader('Access-Control-Allow-Origin', 'https://white-glacier-0c2b21f0f.3.azurestaticapps.net/');
-    res.setHeader("Access-Control-Allow-Headers", 'GET, POST, PUT, DELETE');
-    res.setHeader("Access-Control-Allow-Headers", 'Content-Type');
-    next();
-});
+// //Enable COES middleware
+// app.use(function(req, res, next){
+//     res.setHeader('Access-Control-Allow-Origin', 'http://localhost:5173');
+//     res.setHeader("Access-Control-Allow-Headers", 'GET, POST, PUT, DELETE');
+//     res.setHeader("Access-Control-Allow-Headers", 'Content-Type');
+//     next();
+// });
 
 //jwt middleware
 app.use((req, res, next) => {
